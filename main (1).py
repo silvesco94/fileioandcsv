@@ -17,7 +17,7 @@ def view_previous_entries(entries):
   for entrie in entries: 
     print( ("entry['date']"), ("entry['transaction']"), ("entry['note']"))
 
-# enter for profit loss 
+# enter for diplaying profit loss 
 def display_profit_loss(entries):
   income = 0 
   expenses = 0 
@@ -33,7 +33,7 @@ def display_profit_loss(entries):
   print(f'The total expenses are ${expenses}')
   print(f'The current profit is ${income - expenses}')
 
-
+#add option for user to add entry 
 def add_new_entry(entries):
     date = input("Enter the date (yyyy-mm-dd): ")
     transaction = input("Enter the transaction type (Income or Expense): ")
@@ -49,7 +49,7 @@ def add_new_entry(entries):
         for entry in entries:
             writer.writerow(entry)
 
-
+# function to show what options for users 
 def show_menu():
   print('\nWhat would you like to do?\n')
   print('1) View previous entries')
@@ -72,7 +72,8 @@ def get_menu_choice():
       choice = None
 
   return choice
-
+  
+#formatting options
 def main():
   print('====================')
   print('Welcome to Budgeter!')
